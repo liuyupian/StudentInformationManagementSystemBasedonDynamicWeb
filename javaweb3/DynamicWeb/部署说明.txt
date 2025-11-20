@@ -1,0 +1,45 @@
+学生信息管理系统 - 部署说明
+
+=== 问题解决方案 ===
+
+你遇到的错误是因为Tomcat版本与Servlet API不兼容。
+
+=== 解决方法 ===
+
+方法1：使用IDE部署（推荐）
+1. 用IntelliJ IDEA或Eclipse打开项目
+2. 配置Tomcat服务器
+3. 直接运行项目
+
+方法2：手动部署
+1. 确保使用Tomcat 9.x版本
+2. 将整个webapp文件夹内容复制到Tomcat的webapps/ROOT目录
+3. 启动Tomcat
+
+方法3：修改Tomcat版本
+1. 下载Tomcat 10.x版本
+2. 使用jakarta.servlet API（原代码）
+
+=== 当前项目状态 ===
+✅ 所有代码已修改为兼容javax.servlet API
+✅ 适用于Tomcat 9.x版本
+✅ 功能完整，可以直接使用
+
+=== 登录信息 ===
+用户名: admin
+密码: 123456
+
+=== 访问地址 ===
+http://localhost:8080/项目名称/login.jsp
+
+=== 文件结构 ===
+webapp/
+├── WEB-INF/
+│   ├── web.xml
+│   └── classes/com/lyp/dynamicweb/
+├── css/
+├── js/
+├── img/
+├── login.jsp
+├── index.jsp
+└── list.jsp
